@@ -3,8 +3,9 @@ from import_dataset import import_data, generate_land_map
 import cc3d
 import folium
 
+northern_hemisphere_season = "winter"
 # Import the data
-nitrate_dataset, oxygen_dataset, phosphate_dataset, salinity_dataset, temperature_dataset = import_data()
+nitrate_dataset, oxygen_dataset, phosphate_dataset, salinity_dataset, temperature_dataset = import_data(northern_hemisphere_season)
 
 # Generate the land map
 land_map = generate_land_map(nitrate_dataset)
@@ -14,7 +15,7 @@ nitrate_range = [0, 30]
 oxygen_range = [0, 100]
 phosphate_range = [0, 50]
 salinity_range = [0, 70]
-temperature_range = [15, 50]
+temperature_range = [25, 50]
 depth_limit = 500
 
 # Extract values for latitudes and longitudes
